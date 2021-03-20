@@ -91,7 +91,7 @@
                         $uas = $_POST['uas'];
                         $tugas = $_POST['tugas'];
                             
-                        $ns5 = ['id' => 5, 'nama' => $_POST['nama'], 'nim' => $_POST['nim'], 'matkul' => $_POST['matkul'], 'uts' => $_POST['uts'], 'uas' => $_POST['uas'], 'tugas' => $_POST['tugas']];
+                        $ns5 = ['id' => 5, 'nama' => $nama, 'nim' => $nim, 'matkul' => $matkul, 'uts' => $uts, 'uas' => $uas, 'tugas' => $tugas];
 
                         array_push($ar_nilai, $ns5);
                     }
