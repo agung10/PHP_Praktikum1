@@ -71,19 +71,21 @@
                 <br />
 
                 <?php
-                $proses = $_GET['proses'];
-                $nama_lengkap = $_GET['nama_lengkap'];
-                $matkul = $_GET['matkul'];
-                $nilai_uts = $_GET['nilai_uts'];
-                $nilai_uas = $_GET['nilai_uas'];
-                $nilai_praktikum = $_GET['nilai_praktikum'];
+                    if (isset($_GET['proses'])) {
+                        $proses = $_GET['proses'];
+                        $nama_lengkap = $_GET['nama_lengkap'];
+                        $matkul = $_GET['matkul'];
+                        $nilai_uts = $_GET['nilai_uts'];
+                        $nilai_uas = $_GET['nilai_uas'];
+                        $nilai_praktikum = $_GET['nilai_praktikum'];
 
-                echo 'Proses : ' . $proses;
-                echo '<br/>Nama Lengkap : ' . $nama_lengkap;
-                echo '<br/>Mata Kuliah : ' . $matkul;
-                echo '<br/>Nilai UTS : ' . $nilai_uts;
-                echo '<br/>Nilai UAS : ' . $nilai_uas;
-                echo '<br/>Nilai Tugas Praktikum : ' . $nilai_praktikum;
+                        echo 'Proses : ' . $proses;
+                        echo '<br/>Nama Lengkap : ' . $nama_lengkap;
+                        echo '<br/>Mata Kuliah : ' . $matkul;
+                        echo '<br/>Nilai UTS : ' . $nilai_uts;
+                        echo '<br/>Nilai UAS : ' . $nilai_uas;
+                        echo '<br/>Nilai Tugas Praktikum : ' . $nilai_praktikum;
+                    }
                 ?>
             </div>
             <div class="card-footer">

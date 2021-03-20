@@ -84,23 +84,25 @@
         <br />
 
         <?php
-            $proses = $_POST['proses'];
-            $customer = $_POST['customer'];
-            $produk = $_POST['produk'];
-            $jumlah = $_POST['jumlah'];
+            if (isset($_POST['proses'])) {
+                $proses = $_POST['proses'];
+                $customer = $_POST['customer'];
+                $produk = $_POST['produk'];
+                $jumlah = $_POST['jumlah'];
 
-            if ($produk == "TV") {
-                $total = $jumlah * 4200000;
-            } else if ($produk == "KULKAS") {
-                $total = $jumlah * 3100000;
-            } else if ($produk == "MESIN CUCI") {
-                $total = $jumlah * 3800000;
+                if ($produk == "TV") {
+                    $total = $jumlah * 4200000;
+                } else if ($produk == "KULKAS") {
+                    $total = $jumlah * 3100000;
+                } else if ($produk == "MESIN CUCI") {
+                    $total = $jumlah * 3800000;
+                }
+
+                echo 'Nama Customer : ' . $customer;
+                echo '<br/>Produk Pilihan : ' . $produk;
+                echo '<br/>Jumlah Beli : ' . $jumlah;
+                echo '<br/>Total Belanja : Rp ' . number_format($total, 2, ',' , '.');
             }
-
-            echo 'Nama Customer : ' . $customer;
-            echo '<br/>Produk Pilihan : ' . $produk;
-            echo '<br/>Jumlah Beli : ' . $jumlah;
-            echo '<br/>Total Belanja : Rp ' . number_format($total, 2, ',' , '.');
         ?>
 
     </div>
